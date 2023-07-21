@@ -3,7 +3,7 @@ import './App.css';
 
 function Square({ value, onSquareClick }) {
   return (
-    <button style={{ backgroundColor: 'mistyrose', width: "20px", height: "20px"}} className="square" onClick={onSquareClick}>
+    <button style={{ backgroundColor: 'cyan', width: "20px", height: "20px"}} className="square" onClick={onSquareClick}>
       {value}
     </button>
   ); 
@@ -62,7 +62,6 @@ function Board({ xIsNext, squares, onPlay }) {
         </main>
         <aside>Sidebar</aside>
       </div>
-    
     </>
   );
 }
@@ -98,19 +97,21 @@ export default function Game() {
     });
 
   return (
+    <>
     <div className="game">
       <div className="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
         </div>
         <div className="columns">
         <nav/>
-          <main>
+          <main id="root">
             {moves}
           </main>
           <aside/>
         </div>
-        <footer>Footer</footer>
     </div>
+    <footer>Footer</footer>
+    </>
   );
 }
 
