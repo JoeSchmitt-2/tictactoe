@@ -62,7 +62,7 @@ function Board({ xIsNext, squares, onPlay }) {
         </main>
         <aside>Sidebar</aside>
       </div>
-    <footer>Footer</footer>
+    
     </>
   );
 }
@@ -102,9 +102,14 @@ export default function Game() {
       <div className="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
         </div>
-        <div className="game-info">
-          <ol>{moves}</ol>
+        <div className="columns">
+        <nav/>
+          <main>
+            {moves}
+          </main>
+          <aside/>
         </div>
+        <footer>Footer</footer>
     </div>
   );
 }
